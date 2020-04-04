@@ -4,6 +4,9 @@ class Parent extends Object {
         console.log(123);
     }
 
+    toNs() {
+        console.log('toNa');
+    }
 }
 
 Parent.prototype.funC = function() {

@@ -1,5 +1,8 @@
 function FunParent() {
     console.log('fun');
+    this.s = function() {
+        console.log(123);
+    };
 }
 
 FunParent.prototype.fun = function() {
