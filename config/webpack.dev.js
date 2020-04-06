@@ -16,6 +16,7 @@ module.exports = {
         // 更改静态文件目录位置
         contentBase: path.resolve(__dirname, '../dist'),
         compress: true, // 开启gzip压缩
-        port: 3000
-    }
+        port: 3000,
+    },
+    devtool: 'cheap-module-eval-source-map',
 }

@@ -1,23 +1,23 @@
-import Parent from './Parent';
-import FunParent from './FunParent';
 import './index.css';
 import './index.less';
 import img from '../res/fail.png';
 
-const a = require('./a-module');
+import a from './a-module';
 console.log(a);
+window.name = "123";
 
-const p = new Parent();
-const fp = new FunParent();
+const sum = function(a, b) {
+    return this.name + a + b;
+};
 
-console.log(p);
-for (let a in p) {
-    console.log(a);
-}
+new Promise((resolve, reject) => {
+    resolve(1);
+}).then((v) => {
+    console.log(v);
+});
 
-console.log(fp);
-for (let a in fp) {
-    console.log(a);
-}
+
+
+console.log(sum.call(window, 1, 2));
 
 document.getElementById('img').src = img;

@@ -18,6 +18,11 @@ module.exports = (env) => {
         module: {
             rules: [
                 {
+                    test: /\.js$/,
+                    enforce: "pre",
+                    use: "eslint-loader",
+                },
+                {
                     oneOf: [
                         {
                             test: /\.(c|le)ss$/,
@@ -63,6 +68,11 @@ module.exports = (env) => {
                                 name: 'static/media/[name].[hash:8].[ext]',
                             },
                         },
+                        {
+                            test: /\.js$/,
+                            exclude: /(node_modules|bower_components)/,
+                            loader: "babel-loader"
+                        }
                     ]
                 }
             ],
@@ -76,8 +86,10 @@ module.exports = (env) => {
                 removeAttributeQuotes: true // 删除属性双引号
                 }
             }),
-
-        ]
+        ],
+        resolve: {
+            extensions: [".js", ".jsx", ".json", ".css", ".ts", ".tsx", ".vue"]
+        },
     }
    if (env.development) {
         return merge(dev, base);
