@@ -12,7 +12,7 @@ module.exports = (env) => {
         // 基础配置
         entry: './src/index.js',
         output: {
-            filename: 'bundl.[contentHash].js',
+            filename: 'bundle.[hash].js',
             path: path.resolve(__dirname, '../dist')
         },
         module: {

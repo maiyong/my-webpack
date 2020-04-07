@@ -7,10 +7,11 @@ class Parent extends Object {
     toNs() {
         console.log('toNa');
     }
+
 }
 
 Parent.prototype.funC = function() {
     console.log('funC');
-}
+};
 
 export default Parent;

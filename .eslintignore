@@ -1,5 +1,4 @@
 /node_modules
 /config
 /scripts
-/src/quote/protocol/protobuf_pb.js
-/src/quote/protocol/stock_united_pb.js
+webpack.dll.js

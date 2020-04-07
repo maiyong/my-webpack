@@ -1,9 +1,13 @@
 {
     "presets": [
-        ["@babel/preset-env",{
-            "useBuiltIns":"usage", // 按需加载
-            "corejs":2 // corejs 替代了以前的pollyfill
-        }]
+        [
+            "@babel/preset-env",
+            {
+                "useBuiltIns":"usage", // 按需加载
+                "corejs":2 // corejs 替代了以前的pollyfill
+            }
+        ],
+        "@babel/react"
     ],
     "plugins": ["@babel/plugin-transform-runtime"]
 }
